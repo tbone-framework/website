@@ -1,0 +1,82 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Tbone Framework
+email: hello@475cumulus
+description: >- # this means to ignore newlines until "baseurl:"
+    TBone Framework - Full-duplex RESTful APIs for Python
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://tbone.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+# Disqus Comments
+disqus:
+  shortname: 475cumulus
+
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+autopages:
+  enabled: true
+  tags:
+    layouts: 
+      - 'autopage_tags.html'
+    title: 'Posts tagged with :tag' # :tag is replaced by the tag name
+    permalink: '/blog/tag/:tag'
+  collections:
+    enabled: false
+  categories:
+    enabled: false
+  
+collections_dir: collections
+collections:
+  whatwedo:
+    output: true
+  posts:
+    output: true
+    permalink: '/blog/:year/:month/:day/:title'
+  
+sass:
+  sass_dir: /assets/sass
+  style: compressed
+load_paths:
+    - /assets/sass
+    - node_modules
+exclude: []
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

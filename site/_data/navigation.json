@@ -1,0 +1,18 @@
+[
+    {
+      "url": "/",
+      "text": "Home"
+    },
+    {
+      "url": "/#about",
+      "text": "Github",
+    },
+    {
+      "url": "/whatwedo",
+      "text": "Docs"
+    },
+    {
+      "url": "/blog",
+      "text": "Blog"
+    }
+  ]

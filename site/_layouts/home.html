@@ -1,21 +1,57 @@
 ---
 layout: default
 ---
+<div class='uk-position-top-right'>
+    <a href="https://github.com/tbone-framework"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+</div>
 <section class='uk-section'>
     <div class='uk-container'>
         <div class='uk-text-center'>
+            <img src="../assets/img/logo_large.png" width="350" height="250" alt="TBone">
             <h1>{{page.jumbotron.title}}</h1>
             <h2>{{page.jumbotron.secondary}}</h2>
+            <button class="uk-button uk-button-secondary uk-button-large">Let's Begin</button>
         </div>
     </div>
 </section>
-<section class='uk-section'>
+<section class='uk-section uk-section-primary'>
     <div class='uk-container'>
-
+        <div class='uk-text-center'>
+            <h3>{{page.whatis.title}}</h3>
+            <p>{{page.whatis.text1}}</p>
+            <p>{{page.whatis.text2}}</p>
+            <p>{{page.whatis.text3}}</p>
+        </div>
     </div>
 </section>
-<section class='uk-section'>
-    <div class='uk-container'>
 
+<section class='uk-section' id='features'>
+    <div class='uk-container uk-position-relative uk-margin-medium'>
+        <h3 class='uk-text-center'>What makes Tbone so attractive ?</h3>
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+            {% for item in site.data.features %}
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-header">
+                        <h5 class="uk-card-title">{{item.title}}</h5>
+                    </div>
+                    <div class="uk-card-body">{{item.body}}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
+</section>
+<section class='uk-section' id='real-time'>
+    <div class='uk-container uk-position-relative uk-margin-medium'>
+        <div class='uk-text-center'>
+            <h3>Create real-time apps quickly</h3>
+            <p>
+                One of TBone's core advantages is running on an asynchronous web server.
+                This allows you to build full-duplex APIs, a core feature of real-time apps.
+                Tbone provides classes to build full-duplex REST endpoints on top of Websockets,
+                so you can enjoy a familiar REST-like API without having to handle websocket communication.
+            </p>
+        </div>
+    </div>    
 </section>

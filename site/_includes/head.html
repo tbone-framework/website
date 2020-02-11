@@ -5,6 +5,7 @@
 
     <title>{{ page_title }}</title>
     <base href="{{site.baseurl}}">
+    <link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" | prepend: site.baseurl }}" >
     <!-- Prefetching, preloading, prebrowsing -->
     <!-- More info: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
     <link rel="dns-prefetch" href="{{site.baseurl | remove: "https:" }}">
@@ -12,5 +13,8 @@
     <link rel="prefetch" href="{{site.baseurl}}">
     <link rel="prerender" href="{{site.baseurl}}">
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/main.css">
+
+    <script src='../../node_modules/uikit/dist/js/uikit.min.js'></script>
 </head>

@@ -1,7 +1,9 @@
 version: '3'
 services:
   site:
-    command: jekyll serve
+    command: jekyll serve --watch --incremental
+    # command: bundle exec jekyll serve
+    # command: npm start
     image: jekyll/jekyll:latest
     volumes:
       - ./site:/srv/jekyll

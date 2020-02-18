@@ -1,18 +1,17 @@
 [
     {
-      "url": "/",
-      "text": "Home"
-    },
-    {
-      "url": "/#about",
+      "url": "https://github.com/tbone-framework",
       "text": "Github",
+      "tab": true
     },
     {
-      "url": "/whatwedo",
-      "text": "Docs"
+      "url": "https://docs.tbone.io",
+      "text": "Docs",
+      "tab": true
     },
     {
       "url": "/blog",
-      "text": "Blog"
+      "text": "Blog",
+      "tab": false
     }
   ]

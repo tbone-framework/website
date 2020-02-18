@@ -3,7 +3,11 @@
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav">
                 {% for item in site.data.navigation %}
-                    <li><a href="">{{ item.text }}</a></li>
+                    <li><a href="{{item.url}}"
+                        {% if item.tab %}
+                        target="_blank"
+                        {% endif %}
+                    >{{ item.text }}</a></li>
                 {% endfor %}
             </ul>
         </div>

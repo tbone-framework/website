@@ -29,7 +29,8 @@ layout: default
     <div class='uk-container uk-position-relative uk-margin-medium'>
         <h3 class='uk-text-center'>What makes Tbone so attractive ?</h3>
         <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-            {% for item in site.data.features %}
+            {%- assign features = site.features | sort: 'order' -%}
+            {% for item in features %}
             <div>
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-header">

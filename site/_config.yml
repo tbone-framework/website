@@ -56,7 +56,7 @@ autopages:
   
 collections_dir: collections
 collections:
-  whatwedo:
+  features:
     output: true
   posts:
     output: true

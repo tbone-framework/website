@@ -4,12 +4,21 @@
   "description": "Jekyll based site for the TBone Framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack --watch | jekyll serve --incremental",
+    "build": "npm install | jekyll build"
   },
   "author": "475 Cumulus Ltd.",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
     "uikit": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }

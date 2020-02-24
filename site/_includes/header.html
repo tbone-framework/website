@@ -1,10 +1,13 @@
 <header>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar> 
         <div class="uk-navbar-center">
-            <a href="" class="uk-navbar-item uk-logo">TBone</a>
             <ul class="uk-navbar-nav">
                 {% for item in site.data.navigation %}
-                    <li><a href="">{{ item.text }}</a></li>
+                    <li><a href="{{item.url}}"
+                        {% if item.tab %}
+                        target="_blank"
+                        {% endif %}
+                    >{{ item.text }}</a></li>
                 {% endfor %}
             </ul>
         </div>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class='uk-container'>
+
+    <article class="h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+            <div class="post-tags">
+                {% for tag in page.tags %}
+                <a href="/blog/tag/{{tag}}" class="btn btn-sm btn-primary btn-condensed rounded-corners text-white">{{tag}}</a>
+                {% endfor %}
+            </div>
+            <h1 class="post-title p-name" itemprop="name headline">
+                <a href="javascript:window.location.reload(true)">
+                    {{ page.title | escape }}
+                </a>
+            </h1>
+            <div class="post-meta d-flex justify-content-between">
+                <div>
+                  <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: '%B %d, %Y' }}
+                  </time>
+                  {%- if page.author -%}
+                  • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+                  </span>
+                  {%- endif -%}
+                </div>
+                <a href="/blog/"><i class="fas fa-long-arrow-alt-left"></i> Back to Blog</a>
+              </div>
+        </header>
+
+        <img src="/assets/img/blog/{{page.featured-image}}" alt="featured-image" class="u-photo img-fluid mb-4">
+        
+        <div class="post-content e-content text-justify" itemprop="articleBody">
+            {{ content }}
+        </div>
+
+    </article>
+</div>

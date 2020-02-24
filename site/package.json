@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack --watch | jekyll serve --incremental",
-    "build": "npm install | jekyll build"
+    "build": "npm install && jekyll build"
   },
   "author": "475 Cumulus Ltd.",
   "license": "MIT",
